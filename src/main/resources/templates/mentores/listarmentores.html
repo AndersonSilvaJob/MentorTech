@@ -23,7 +23,7 @@
                                 <th>Nome</th>
                                 <th>Email</th>
                                 <th>Senha</th>
-                                <th></th>
+                                <th>Celular</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -33,18 +33,19 @@
                                 <th>Nome</th>
                                 <th>Email</th>
                                 <th>Senha</th>
-                                <th></th>
+                                <th>Celular</th>
                                 <th></th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            <tr th:each="administrador : ${administradores}">
-                                <td th:text="${administrador.id}"></td>
-                                <td th:text="${administrador.nome}"></td>
-                                <td th:text="${administrador.email}"></td>
-                                <td th:text="${administrador.senha}"></td>
-                                <td><a th:href="@{'/administradores/' + ${administrador.id}}" class="btn btn-warning">Alterar</td>
-                                <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/administradores/{id}(id=${administrador.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
+                            <tr th:each="mentor : ${mentores}">
+                                <td th:text="${mentor.id}"></td>
+                                <td th:text="${mentor.nomeMentor}"></td>
+                                <td th:text="${mentor.emailMentor}"></td>
+                                <td th:text="${mentor.senhaMentor}"></td>
+                                <td th:text="${mentor.celularMentor}"></td>
+                                <td><a th:href="@{'/mentores/' + ${mentor.id}}" class="btn btn-warning">Alterar</td>
+                                <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/mentores/{id}(id=${mentor.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
                             </tr>
                         </tbody>
                     </table>
