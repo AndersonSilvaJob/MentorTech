@@ -14,6 +14,8 @@ public class LoginInterceptorAppConfig extends WebMvcConfigurerAdapter {
          "/login",
          "/inicio",
          "/cadastroMentor",
+         "/cadastroUsuario",
+         "/mentores/criar",
          "/error",
          "/logar",
          "/img/**",

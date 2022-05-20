@@ -22,14 +22,21 @@ public class InicioController {
     public String index(/*Model model*/){
      // List<Mentor> administradores = (List<Mentor>)repo.findAll();
    //   model.addAttribute("administradores", administradores);
-      return "mentores/inicio";
+      return "site/inicio";
     }
 
     @GetMapping("/cadastroMentor")
     public String novomentor(/*Model model*/){
      // List<Mentor> administradores = (List<Mentor>)repo.findAll();
    //   model.addAttribute("administradores", administradores);
-      return "mentores/cadastrarmentor";
+      return "site/cadastrarmentor";
+    }
+
+    @GetMapping("/cadastroUsuario")
+    public String novousuario(/*Model model*/){
+     // List<Mentor> administradores = (List<Mentor>)repo.findAll();
+   //   model.addAttribute("administradores", administradores);
+      return "site/cadastrarusuario";
     }
 
     @PostMapping("/mentores/criar")
@@ -45,6 +52,14 @@ public class InicioController {
       model.addAttribute("mentores", mentores);
       return "mentores/listarmentores";
     }
+
+    /*@PostMapping("/mentores/{id}/atualizar")
+  public String atualizar(@PathVariable int id, Mentor mentor){
+    // if(!repo.exist(id)){
+    if(!repo.existsById(id)){
+      return "mentores/editarmentor";
+    }*/
+    
     @GetMapping("/mentores/{id}")
     public String busca(@PathVariable int id, Model model){
       Optional<Mentor> admin = repo.findById(id);
