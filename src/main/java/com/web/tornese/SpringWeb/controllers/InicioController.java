@@ -6,6 +6,7 @@ import java.util.Optional;
 import com.web.tornese.SpringWeb.models.Mentor;
 import com.web.tornese.SpringWeb.repositorio.MentoresRepo;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,19 +33,13 @@ public class InicioController {
       return "site/cadastrarmentor";
     }
 
-    @GetMapping("/cadastroUsuario")
-    public String novousuario(/*Model model*/){
-     // List<Mentor> administradores = (List<Mentor>)repo.findAll();
-   //   model.addAttribute("administradores", administradores);
-      return "site/cadastrarusuario";
-    }
-
     @PostMapping("/mentores/criar")
     public String criar(Mentor mentor){
       repo.save(mentor);
       //return "redirect:/inicio";
       return "mentores/listarmentores";
     }
+
 
     @GetMapping("/mentores")
     public String index(Model model){

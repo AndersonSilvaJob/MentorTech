@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!--<div th:replace="compartilhado/top"></div>-->
+    <!-- Begin Page Content -->
+    <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,141 +9,61 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="css/persona.css">
-    <title>ENTRAR</title>
+    <title>Cadastre-se</title>
 </head>
-<body class="bg-dark body-casdastro">
-    <div class="card bg-transparent w-50 w-auto">
-        <div class="card-title text-white text-center">
-            <h1>Formulario de cadastro</h1>
+<body>
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Novo Usuario</h1>
+        <p class="mb-4">
+            Aqui iremos cadastrar um novo Usuario
+        </p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4" style="padding: 30px;">
+            <form method="POST" action="/usuarios/criar" onsubmit="return confirm('Confirma ação')">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" required id="nomeUsuario" name="nomeUsuario" placeholder="Digite o seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" required id="emailUsuario" name="emailUsuario" placeholder="Digite o seu email">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">Cpf</label>
+                    <input type="text" class="form-control" required id="cpfUsuario" name="cpfUsuario" placeholder="Digite o seu cpf">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" required id="senhaUsuario" name="senhaUsuario" placeholder="Digite o seu senha">
+                </div>
+                <div class="form-group">
+                    <label for="observacao">celular</label>
+                    <textarea class="form-control" id="celularUsuario" name="celularUsuario" placeholder="Digite o seu celular"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genero</label>
+                    <textarea class="form-control" id="generoUsuario" name="generoUsuario" placeholder="Digite o seu celular"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">Linkedin</label>
+                    <textarea class="form-control" id="linkedinUsuario" name="linkedinUsuario" placeholder="Digite o seu celular"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="github">Github</label>
+                    <textarea class="form-control" id="githubUsuario" name="githubUsuario" placeholder="Digite o seu celular"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </div>
-        <form action="" class="text-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" class="form-control" id="exampleInputname"  placeholder="Seu nome">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control" id="exemplecpf" placeholder="000.000.000-00">
-                        <label for="cep">CEP</label>
-                        <input type="text" class="form-control" id="exemplecep" placeholder="00.000-000">
-                    </div>
-                    <div class="col-sm">
-                        <label for="exampleInputEmail1">Endereço de email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-                        <label for="Celular">Celular</label>
-                        <input type="tel" class="form-control" id="exemplecelular" placeholder="(00) 9 9999-9999">
-                        <label for="logradouro">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" placeholder="Rua Xandilolaia...">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="numero">Numero</label>
-                        <input type="text" class="form-control w-70" id="numero" placeholder="1, 1A">
-                    </div>
-                    <div class="col-sm">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control w-auto" id="bairro" placeholder="Bairro">
-                    </div>
-                    <div class="col-sm">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" class="form-control w-auto" id="cidade" placeholder="Cidade">
-                    </div>
-                    <div class="col-sm">
-                        <label for="estado">Estado</label>
-                        <input type="text" class="form-control" id="estado" placeholder="PE">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="genero">Genero</label>
-                        <select name="genero" id="genero" class="form-control">
-                            <option value="">Home</option>
-                            <option value="">Mulher</option>
-                            <option value="">Gay</option>
-                            <option value="">Prifiro nao falar</option>
-                        </select>
-                    </div>
-                    <div class="col-sm">
-                        <label for="deficiencia">Possui Algum tipo de Deficiência?</label>
-                        <select name="deficiencia" id="deficiencia" class="form-control">
-                            <option value="">Não</option>
-                            <option value="">Sim</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <h3 class="text-center mt-5">Formação</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="graduacao">Graduação</label>
-                        <input type="text" class="form-control" id="graduacao" placeholder="Analise e Desenvolvimento de Sistemas">
-                        <label for="certificacoes" class="mt-4"><h6>Certificações/Cursos</h6></label>
-                        <input type="text" class="form-control" id="cerfiticacao1" placeholder="Exemplo...">
-                        <input type="text" class="form-control mt-1" id="cerfiticacao1" placeholder="Exemplo...">
-                        <input type="text" class="form-control mt-1" id="cerfiticacao1" placeholder="Exemplo...">
-                    </div>
-                    <div class="col-sm">
-                        <label for="instituicao">Instituição</label>
-                        <input type="text" class="form-control" id="instituicao" placeholder="UFZZ">
-                        <label for="certificacoes" class="mt-4"><h6>Instituição</h6></label>
-                        <input type="text" class="form-control" id="cerfiticacao1" placeholder="Exemplo...">
-                        <input type="text" class="form-control mt-1" id="cerfiticacao1" placeholder="Exemplo...">
-                        <input type="text" class="form-control mt-1" id="cerfiticacao1" placeholder="Exemplo...">
-                    </div>
-                    <div class="col-sm">
-                        <label for="conculsao-graduacao">Conclui</label>
-                        <input type="date" class="form-control" id="conculsao-graduacao" >
-                        <label for="data-cetificacao" class="mt-4"><h6>Data</h6></label>
-                        <input type="date" class="form-control" id="cerfiticacao1">
-                        <input type="date" class="form-control mt-1" id="cerfiticacao1">
-                        <input type="date" class="form-control mt-1" id="cerfiticacao1">
-                    </div>
-                </div>
-            </div>
-            <h3 class="text-center mt-5">Experiência Profissional</h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <label for="cargo1">Cargo</label>
-                        <input type="text" class="form-control" id="cargo1" placeholder="Desenvolvedor Java Jr.">
-                        <label for="cargo2">Cargo</label>
-                        <input type="text" class="form-control" id="cargo2" placeholder="Desenvolvedor Java Jr.">
-                        <label for="cargo3">Cargo</label>
-                        <input type="text" class="form-control" id="cargo2" placeholder="Desenvolvedor Java Jr.">
-                    </div>
-                   
-                    <div class="col-sm">
-                        <label for="empresa1">Empresa</label>
-                        <input type="text" class="form-control" id="empresa1" placeholder="Exemplo...">
-                        <label for="empresa2">Empresa</label>
-                        <input type="text" class="form-control" id="empresa2" placeholder="Exemplo...">
-                        <label for="empresa3">Empresa</label>
-                        <input type="text" class="form-control" id="empresa3" placeholder="Exemplo...">
-                    </div>
-                    <div class="col-sm">
-                        <label for="inicio1">Inicio</label>
-                        <input type="date" class="form-control " id="inicio1">
-                        <label for="inicio2">Inicio</label>
-                        <input type="date" class="form-control " id="inicio2">
-                        <label for="inicio3">Inicio</label>
-                        <input type="date" class="form-control " id="inicio3">
-                    </div>
-                    <div class="col-sm">
-                        <label for="fim1">Fim</label>
-                        <input type="date" class="form-control " id="fim1">
-                        <label for="fim2">Fim</label>
-                        <input type="date" class="form-control " id="fim2">
-                        <label for="fim3">Fim</label>
-                        <input type="date" class="form-control " id="fim3">
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary mt-5 mb-5 w-100">Enviar</button>
-        </form>
+
     </div>
-    
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
