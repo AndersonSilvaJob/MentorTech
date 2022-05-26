@@ -38,7 +38,7 @@ public class MentorController {
     public String criar(Mentor mentor){
       repo.save(mentor);
       //return "redirect:/inicio";
-      return "mentores/listarmentores";
+      return "login/index";
     }
 
 
@@ -68,6 +68,19 @@ public class MentorController {
       return "/mentores/editarmentor";
     }
     
+    @PostMapping("/mentores/{id}/atualizar")
+    public String atualizar(@PathVariable int id, Mentor mentor){
+      // if(!repo.exist(id)){
+      if(!repo.existsById(id)){
+        return "redirect:/mentores/{id}";
+      }
+  
+      repo.save(mentor);
+  
+      return "redirect:/mentores/{id}";
+    }
+  
+
     @GetMapping("/editarmentor")
     public String editar(/*Model model*/){
      // List<Mentor> administradores = (List<Mentor>)repo.findAll();
