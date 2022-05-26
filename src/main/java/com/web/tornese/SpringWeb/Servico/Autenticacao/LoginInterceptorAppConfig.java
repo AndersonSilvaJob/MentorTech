@@ -13,6 +13,7 @@ public class LoginInterceptorAppConfig extends WebMvcConfigurerAdapter {
         .excludePathPatterns(
          "/login",
          "/inicio",
+         "/editarmentor",
          "/cadastroMentor",
          "/cadastroUsuario",
          "/mentores/criar",

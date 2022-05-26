@@ -1,5 +1,6 @@
 package com.web.tornese.SpringWeb.controllers;
 
+import java.io.Console;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class InicioController {
+public class MentorController {
     @Autowired
     private MentoresRepo repo;
   
@@ -58,11 +59,19 @@ public class InicioController {
     @GetMapping("/mentores/{id}")
     public String busca(@PathVariable int id, Model model){
       Optional<Mentor> admin = repo.findById(id);
+
       try{
         model.addAttribute("mentor", admin.get());
       }
       catch(Exception err){ return "redirect:/mentores"; }
   
+      return "/mentores/editarmentor";
+    }
+    
+    @GetMapping("/editarmentor")
+    public String editar(/*Model model*/){
+     // List<Mentor> administradores = (List<Mentor>)repo.findAll();
+   //   model.addAttribute("administradores", administradores);
       return "/mentores/editarmentor";
     }
 

@@ -13,15 +13,15 @@
             <form method="POST" th:action="@{'/mentores/' + ${mentor?.id} + '/atualizar'}">
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input type="text" class="form-control" th:value="${mentor?.nome_mentor}" required id="nomeMentor" name="nomeMentor" placeholder="Digite o seu nome">
+                    <input type="text" class="form-control" th:value="${mentor?.nomeMentor}" required id="nomeMentor" name="nomeMentor" placeholder="Digite o seu nome">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" th:value="${mentor?.email_mentor}" required id="emailMentor" name="emailMentor" placeholder="Digite o seu email">
+                    <input type="email" class="form-control" th:value="${mentor?.emailMentor}" required id="emailMentor" name="emailMentor" placeholder="Digite o seu email">
                 </div>
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input type="password" class="form-control" th:value="${mentor?.senha_mentor}" required id="senhaMentor" name="senhaMentor" placeholder="Digite o seu senha">
+                    <input type="password" class="form-control" th:value="${mentor?.senhaMentor}" required id="senhaMentor" name="senhaMentor" placeholder="Digite o seu senha">
                 </div>
                 <div class="form-group">
                     <label for="observacao">Celular</label>
