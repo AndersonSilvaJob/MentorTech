@@ -42,6 +42,19 @@ header{
     margin-top: 5%;
     align-content: center;
 }
+.cadastro{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+.colcadastro{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.colcadastro:hover{
+   
+    box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.171);
+}
 .container,
 .container-fluid,
 .container-xxl,
