@@ -21,13 +21,13 @@ public class LoginUsuarioController {
   private UsuariosRepo repo;
  
 
-  /*@GetMapping("/login")
+  @GetMapping("/loginusuario")
   public String index(){
-    return "login/index";
+    return "login/loginusuario";
   }
-  */
+  
 
-  @PostMapping("/logaruser")
+  @PostMapping("/logarusuario")
   public String logar(Model model, Usuario admParam, String lembrar, HttpServletResponse response) throws IOException{
     Usuario adm = this.repo.Login(admParam.getEmailUsuario(), admParam.getSenhaUsuario());
     if(adm != null){
@@ -36,6 +36,7 @@ public class LoginUsuarioController {
       CookieService.setCookie(response, "usuarioId", String.valueOf(adm.getId()), tempoLogado);
       CookieService.setCookie(response, "nomeUsuario", String.valueOf(adm.getNomeUsuario()), tempoLogado);
       return "redirect:/";
+      //return "home/index";
     }
     model.addAttribute("erro", "Usuário ou senha inválidos");
     return "login/index";

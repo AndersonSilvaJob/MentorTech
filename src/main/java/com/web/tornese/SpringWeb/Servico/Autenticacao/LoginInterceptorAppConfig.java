@@ -11,7 +11,10 @@ public class LoginInterceptorAppConfig extends WebMvcConfigurerAdapter {
   public void addInterceptors(InterceptorRegistry registry) {
     registry.addInterceptor(new LoginInterceptor())
         .excludePathPatterns(
-         "/login",
+         "/loginmentor",
+         "/loginusuario",
+         "/logarusuario",
+         "/logaruser",
          "/inicio",
          "/iniciocadastro",
          "/iniciologin",

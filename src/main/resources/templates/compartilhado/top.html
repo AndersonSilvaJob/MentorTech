@@ -46,7 +46,8 @@
                 <a class="nav-link" href="/">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard Mentores - </span>
-                    <span th:text="${nome}">
+                    <span th:text="${nome}">-</span>
+                    <span th:text="${id}">
                     </span>
                 </a>
             </li>
@@ -64,7 +65,7 @@
                      <a class="nav-link" href="/mentores">
                             <i class="fas fa-fw fa-table"></i>
                             <span>Cadastrar Perfil</span></a>
-                            <a class="nav-link" href="/mentores/{id}">
+                            <a class="nav-link" th:href="@{'/mentores/' + ${id}}">
                                 <i class="fas fa-fw fa-table"></i>
                                 <span>Atualizar Perfil</span></a>
                                 <a class="nav-link" href="/editarmentor">
