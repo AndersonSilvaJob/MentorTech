@@ -39,7 +39,7 @@ public class LoginUsuarioController {
       //return "home/index";
     }
     model.addAttribute("erro", "Usuário ou senha inválidos");
-    return "login/index";
+    return "login/loginusuario";
   }
 
   @GetMapping("/sairuser")

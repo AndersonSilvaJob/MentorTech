@@ -25,6 +25,13 @@ public class UsuariosController {
       return "site/cadastrarusuario";
     }
 
+    @GetMapping("/usuarios")
+    public String index(Model model){
+      List<Usuario> usuarios = (List<Usuario>)repo.findAll();
+      model.addAttribute("usuarios", usuarios);
+      return "usuarios/usuario";
+    }
+
     @PostMapping("/usuarios/criar")
     public String criar(Usuario usuario){
       repo.save(usuario);
@@ -38,8 +45,8 @@ public class UsuariosController {
       try{
         model.addAttribute("usuario", admin.get());
       }
-      catch(Exception err){ return "redirect:/mentores"; }
+      catch(Exception err){ return "redirect:/usuarios"; }
   
-      return "/mentores/editarmentor";
+      return "usuario/usuario";
     }
 }

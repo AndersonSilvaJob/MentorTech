@@ -38,7 +38,7 @@ public class MentorController {
     public String criar(Mentor mentor){
       repo.save(mentor);
       //return "redirect:/inicio";
-      return "login/index";
+      return "site/inicio";
     }
 
 
