@@ -42,11 +42,13 @@ header{
 }
 .body-casdastro{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 5%;
-    align-content: center;
+    align-items: center;
 }
 .cadastro{
+    background-color: rgb(243, 247, 250);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
 }
 
@@ -72,3 +74,8 @@ header{
   margin-right: auto;
   margin-left: auto;
 }
+
+.w-40{width: 40%;}
+.w-35{width: 35%;}
+.w-30{width: 30%;}
+.w-20{width: 20%;}
