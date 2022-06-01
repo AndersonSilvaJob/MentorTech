@@ -1,5 +1,7 @@
 package com.web.tornese.SpringWeb.models;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,10 +25,19 @@ public class Mentor {
   @Column(name = "celular_mentor")
   private String celularMentor;
 
-    
+ @OneToMany(mappedBy = "mentor", cascade = CascadeType.ALL)
+  private List<Agendamento> agendamentos;  
 
 public int getId() {
     return id;
+}
+
+public List<Agendamento> getAgendamentos() {
+    return agendamentos;
+}
+
+public void setAgendamentos(List<Agendamento> agendamentos) {
+    this.agendamentos = agendamentos;
 }
 
 public String getEmailMentor() {

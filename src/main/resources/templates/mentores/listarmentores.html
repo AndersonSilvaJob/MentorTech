@@ -28,16 +28,6 @@
                                 <th></th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Id</th>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>Senha</th>
-                                <th>Celular</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             <tr th:each="mentor : ${mentores}">
                                 <td th:text="${mentor.id}"></td>

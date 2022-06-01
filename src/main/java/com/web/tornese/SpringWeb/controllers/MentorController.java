@@ -42,8 +42,10 @@ public class MentorController {
     }
 
 
-    @GetMapping("/mentores")
-    public String index(Model model){
+    @GetMapping("/mentoreslistar/{id}")
+    public String index(@PathVariable int id,Model model){
+      Optional<Mentor> admin = repo.findById(id);
+      
       List<Mentor> mentores = (List<Mentor>)repo.findAll();
       model.addAttribute("mentores", mentores);
       return "mentores/listarmentores";

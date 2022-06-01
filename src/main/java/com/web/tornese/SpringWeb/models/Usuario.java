@@ -1,5 +1,7 @@
 package com.web.tornese.SpringWeb.models;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -34,8 +36,17 @@ public class Usuario {
     @Column(name = "genero_usuario")
     private String generoUsuario;
 
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Agendamento> agendamentos;  
+
     public int getId() {
         return id;
+    }
+    public List<Agendamento> getAgendamentos() {
+        return agendamentos;
+    }
+    public void setAgendamentos(List<Agendamento> agendamentos) {
+        this.agendamentos = agendamentos;
     }
     public void setId(int id) {
         this.id = id;
