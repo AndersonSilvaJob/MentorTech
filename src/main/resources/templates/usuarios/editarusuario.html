@@ -1,0 +1,36 @@
+<div th:replace="compartilhado/topusuario"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Edição do Usuario</h1>
+        <p class="mb-4">
+            Aqui iremos editar o Usuario
+        </p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4" style="padding: 30px;">
+            <form method="POST" th:action="@{'/mentores/' + ${mentor?.id} + '/atualizar'}">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" th:value="${usuario?.nomeUsuario}" required id="nomeUsuario" name="nomeUsuario" placeholder="Digite o seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" th:value="${usuario?.emailUsuario}" required id="emailUsuario" name="emailUsuario" placeholder="Digite o seu email">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" class="form-control" th:value="${usuario?.senhaUsuario}" required id="senhaUsuario" name="senhaUsuario" placeholder="Digite o seu senha">
+                </div>
+                <div class="form-group">
+                    <label for="observacao">Celular</label>
+                    <textarea class="form-control" id="celularUsuario" name="celularUsuario" placeholder="Digite o seu observação" th:inline="text">[[${usuario.celularUsuario}]]</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>

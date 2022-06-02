@@ -49,4 +49,13 @@ public class UsuariosController {
   
       return "usuario/usuario";
     }
+
+    @GetMapping("/usuariolistar/{id}")
+    public String index(@PathVariable int id,Model model){
+      Optional<Usuario> admin = repo.findById(id);
+      
+      List<Usuario> mentores = (List<Usuario>)repo.findAll();
+      model.addAttribute("mentores", mentores);
+      return "usuarios/editarusuario";
+    }
 }

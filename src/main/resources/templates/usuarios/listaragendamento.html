@@ -1,0 +1,49 @@
+<div th:replace="compartilhado/top"></div>
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Agendamentos</h1>
+        <p class="mb-4">
+            Aqui irá listar os Agendamentos do meu sistema
+        </p>
+        <span th:text="${id}"></span>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <a href="/cadastroMentor" class="btn btn-primary" style="margin-right: 20px;">Novo</a>
+                <h6 class="m-0 font-weight-bold text-primary" style="display: inline-block;">Lista de Mentores</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Senha</th>
+                                <th>Celular</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="mentor : ${mentores}">
+                                <td th:text="${mentor.id}"></td>
+                                <td th:text="${mentor.nomeMentor}"></td>
+                                <td th:text="${mentor.emailMentor}"></td>
+                                <td th:text="${mentor.senhaMentor}"></td>
+                                <td th:text="${mentor.celularMentor}"></td>
+                                <td><a th:href="@{'/mentores/' + ${mentor.id}}" class="btn btn-warning">Alterar</td>
+                                <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/mentores/{id}(id=${mentor.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+<div th:replace="compartilhado/baixo"></div>

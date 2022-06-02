@@ -58,15 +58,15 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/administradores">
+                <a class="nav-link" href="/usuarios">
                     <i class="fas fa-fw fa-table"></i>
-                     <a class="nav-link" href="/mentores">
+                     <a class="nav-link" href="/usuarios">
                             <i class="fas fa-fw fa-table"></i>
                             <span>Atualizar o perfil</span></a>
-                            <a class="nav-link" href="/mentores">
+                            <a class="nav-link" th:href="@{'/usuariolistar/' + ${id}}">
                                 <i class="fas fa-fw fa-table"></i>
                                 <span>Lista de Mentores</span></a>
-                                    <a class="nav-link" href="/mentores">
+                                    <a class="nav-link" href="/usuarios/{id}">
                                         <i class="fas fa-fw fa-table"></i>
                                         <span>Meus Agendamentos</span></a>
             </li>
