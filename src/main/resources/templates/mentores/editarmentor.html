@@ -24,20 +24,25 @@
                     <input type="password" class="form-control" th:value="${mentor?.senhaMentor}" required id="senhaMentor" name="senhaMentor" placeholder="Digite o seu senha">
                 </div>
                 <div class="form-group">
-                    <label for="observacao">Celular</label>
-                    <input type="tel" class="form-control" id="celularMentor" name="celularMentor" placeholder="Digite o seu observação" th:inline="text">[[${mentor.celularMentor}]]/>
-                </div> <div class="form-group">
-                    <label for="observacao">Empresa</label>
-                    <input type="text" class="form-control" id="empresaMentor" name="empresaMentor" placeholder="Digite o seu observação" th:inline="text">[[${mentor.empresaMentor}]]/>
+                    <label for="email">Celular</label>
+                    <input type="text" class="form-control" th:value="${mentor?.celularMentor}" required id="celularMentor" name="celularMentor" placeholder="Digite o seu numero">
                 </div>
-            </div> <div class="form-group">
-                <label for="observacao">Função</label>
-                <input type="text" class="form-control" id="funcaoMentor" name="funcaoMentor" placeholder="Digite o seu observação" th:inline="text">[[${mentor.funcaoMentor}]]/>
-            </div>
-            <div class="form-group">
-                <label for="observacao">Sua mensagem para os mentorados</label>
-                <textarea class="form-control" id="mensagemUsuario" name="mensagemUsuario" placeholder="Digite o seu observação" th:inline="text">[[${mentor.mensagemUsuario}]]</textarea>
-            </div>
+                <div class="form-group">
+                    <label for="email">Empresa</label>
+                    <input type="text" class="form-control" th:value="${mentor?.empresaMentor}" required id="empresaMentor" name="empresaMentor" placeholder="Digite a sua empresa">
+                </div>
+                <div class="form-group">
+                    <label for="email">Função</label>
+                    <input type="text" class="form-control" th:value="${mentor?.funcaoMentor}" required id="funcaoMentor" name="funcaoMentor" placeholder="Digite a sua função">
+                </div>
+                <div class="form-group">
+                    <label for="email">Valor</label>
+                    <input type="text" class="form-control" th:value="${mentor?.valorMentor}" required id="valorMentor" name="valorMentor" placeholder="Digite o seu valor por hora, ex: 100,00">
+                </div>
+                <div class="form-group">
+                    <label for="email">Sua mensagem para os mentorados</label>
+                    <input type="text" class="form-control" th:value="${mentor?.mensagemMentor}" required id="mensagemMentor" name="mensagemMentor" placeholder="Digite a sua mensagem">
+                </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>

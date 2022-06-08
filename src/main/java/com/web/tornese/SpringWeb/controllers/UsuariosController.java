@@ -32,6 +32,13 @@ public class UsuariosController {
       return "usuarios/usuario";
     }
 
+    @GetMapping("/usuarios/agendamento")
+    public String agendamento(Model model){
+      List<Usuario> usuarios = (List<Usuario>)repo.findAll();
+      model.addAttribute("usuarios", usuarios);
+      return "usuarios/testeagendamento";
+    }
+
     @PostMapping("/usuarios/criar")
     public String criar(Usuario usuario){
       repo.save(usuario);
@@ -47,15 +54,22 @@ public class UsuariosController {
       }
       catch(Exception err){ return "redirect:/usuarios"; }
   
-      return "usuario/usuario";
+      return "usuarios/editarusuario";
     }
 
     @GetMapping("/usuariolistar/{id}")
     public String index(@PathVariable int id,Model model){
       Optional<Usuario> admin = repo.findById(id);
       
-      List<Usuario> mentores = (List<Usuario>)repo.findAll();
-      model.addAttribute("mentores", mentores);
+      List<Usuario> usuarios = (List<Usuario>)repo.findAll();
+      model.addAttribute("usuario", usuarios);
+      return "usuarios/editarusuario";
+    }
+
+    @GetMapping("/editarUsuario")
+    public String editar(/*Model model*/){
+     // List<Mentor> administradores = (List<Mentor>)repo.findAll();
+   //   model.addAttribute("administradores", administradores);
       return "usuarios/editarusuario";
     }
 }

@@ -25,6 +25,18 @@ public class Mentor {
   @Column(name = "celular_mentor")
   private String celularMentor;
 
+  @Column(name = "empresa_mentor")
+  private String empresaMentor;
+
+  @Column(name = "funcao_mentor")
+  private String funcaoMentor;
+
+  @Column(name = "valor_mentor")
+  private String valorMentor;
+
+  @Column(name = "mensagem_mentor")
+  private String mensagemMentor;
+
  @OneToMany(mappedBy = "mentor", cascade = CascadeType.ALL)
   private List<Agendamento> agendamentos;  
 
@@ -75,4 +87,38 @@ public void setCelularMentor(String celularMentor) {
 public void setId(int id) {
     this.id = id;
 }
+
+public String getEmpresaMentor() {
+    return empresaMentor;
+}
+
+public void setEmpresaMentor(String empresaMentor) {
+    this.empresaMentor = empresaMentor;
+}
+
+public String getFuncaoMentor() {
+    return funcaoMentor;
+}
+
+public void setFuncaoMentor(String funcaoMentor) {
+    this.funcaoMentor = funcaoMentor;
+}
+
+public String getValorMentor() {
+    return valorMentor;
+}
+
+public void setValorMentor(String valorMentor) {
+    this.valorMentor = valorMentor;
+}
+
+public String getMensagemMentor() {
+    return mensagemMentor;
+}
+
+public void setMensagemMentor(String mensagemMentor) {
+    this.mensagemMentor = mensagemMentor;
+}
+
+
 }

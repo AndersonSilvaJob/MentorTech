@@ -24,9 +24,8 @@
                     <input type="password" class="form-control" th:value="${usuario?.senhaUsuario}" required id="senhaUsuario" name="senhaUsuario" placeholder="Digite o seu senha">
                 </div>
                 <div class="form-group">
-                    <label for="observacao">Celular</label>
-                    <input type="text" class="form-control" id="celularUsuario" name="celularUsuario" placeholder="Digite o seu observação" th:inline="text">[[${usuario.celularUsuario}]]>
-                    <!--<textarea class="form-control" id="celularUsuario" name="celularUsuario" placeholder="Digite o seu observação" th:inline="text">[[${usuario.celularUsuario}]]</textarea>-->
+                    <label for="email">Celular</label>
+                    <input type="email" class="form-control" th:value="${usuario?.celularUsuario}" required id="celularUsuario" name="celularUsuario" placeholder="Digite o seu celular">
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>

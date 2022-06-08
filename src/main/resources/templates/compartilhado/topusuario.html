@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/home">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Usuario -  <span th:text="${nome}"></span></a>
             </li>
@@ -58,14 +58,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/usuarios">
-                    <i class="fas fa-fw fa-table"></i>
-                     <a class="nav-link" href="/usuarios">
+                    <a class="nav-link" th:href="@{'/usuarios/' + ${id}}">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Perfil</span></a>
+                     <a class="nav-link" href="/usuarios/agendamento">
                             <i class="fas fa-fw fa-table"></i>
-                            <span>Atualizar o perfil</span></a>
-                            <a class="nav-link" th:href="@{'/usuariolistar/' + ${id}}">
-                                <i class="fas fa-fw fa-table"></i>
-                                <span>Lista de Mentores</span></a>
+                            <span>Agendamentos</span></a>
                                     <a class="nav-link" href="/usuarios/{id}">
                                         <i class="fas fa-fw fa-table"></i>
                                         <span>Meus Agendamentos</span></a>
@@ -136,7 +134,7 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="/administradores">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Administradores
+                                    Usuarios
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
