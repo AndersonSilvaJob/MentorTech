@@ -27,6 +27,22 @@
                     <label for="email">Celular</label>
                     <input type="email" class="form-control" th:value="${usuario?.celularUsuario}" required id="celularUsuario" name="celularUsuario" placeholder="Digite o seu celular">
                 </div>
+                <div class="form-group">
+                    <label for="email">Cpf</label>
+                    <input type="email" class="form-control" th:value="${usuario?.cpfUsuario}" required id="cpfUsuario" name="cpfUsuario" placeholder="Digite o seu cpf">
+                </div>
+                <div class="form-group">
+                    <label for="email">Genero</label>
+                    <input type="email" class="form-control" th:value="${usuario?.generoUsuario}" required id="generoUsuario" name="generoUsuario" placeholder="informe seu genero">
+                </div>
+                <div class="form-group">
+                    <label for="email">Github</label>
+                    <input type="email" class="form-control" th:value="${usuario?.githubUsuario}" required id="githubUsuario" name="githubUsuario" placeholder="Digite o seu github">
+                </div>
+                <div class="form-group">
+                    <label for="email">Linkedin</label>
+                    <input type="email" class="form-control" th:value="${usuario?.linkedinUsuario}" required id="linkedinUsuario" name="linkedinUsuario" placeholder="Digite o seu Linkedin">
+                </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
