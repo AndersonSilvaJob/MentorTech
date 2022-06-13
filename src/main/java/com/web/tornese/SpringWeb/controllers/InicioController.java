@@ -18,12 +18,12 @@ public class InicioController {
       return "site/escolhalogin";
     }
 
-    @GetMapping(value="/iniciopoliticaPriv")
+    @GetMapping("/iniciopoliticaPriv")
     public String politicaPriv() {
         return "site/politicaPriv";
     }
 
-    @GetMapping(value="/iniciosobre")
+    @GetMapping("/iniciosobre")
     public String sobre() {
         return "site/sobre";
     }
