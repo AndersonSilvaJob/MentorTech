@@ -18,9 +18,9 @@ public class InicioController {
       return "site/escolhalogin";
     }
 
-    @GetMapping("/iniciopoliticaPriv")
+    @GetMapping("/iniciopoliticapriv")
     public String politicaPriv() {
-        return "site/politicaPriv";
+        return "site/politicapriv";
     }
 
     @GetMapping("/iniciosobre")

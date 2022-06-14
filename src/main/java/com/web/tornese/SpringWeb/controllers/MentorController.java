@@ -90,4 +90,11 @@ public class MentorController {
       return "/mentores/editarmentor";
     }
 
+    @GetMapping("/cadastroagendamento")
+    public String agendar(/*Model model*/){
+     // List<Mentor> administradores = (List<Mentor>)repo.findAll();
+   //   model.addAttribute("administradores", administradores);
+      return "/mentores/cadastraragendamento";
+    }
+    
 }
